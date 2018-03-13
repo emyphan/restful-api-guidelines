@@ -121,6 +121,39 @@ document.body.classList.add('toc-left');
 nav.append(ul);
 header.prepend(nav);
 </script>
-++++
 
+<!-- Adds enable and disable sidebar bar button-->
+<script>
+var toggleButton = document.createElement("button");
+toggleButton.id = 'toggle';
+toggleButton.className = 'toggleNavigation';
+toggleButton.innerHTML = 'navigation';
+
+var content = document.getElementById('content');
+content.append(toggleButton);
+content.classList.add('show');
+
+function checkClass(var element, var className){
+    var cn = element.className;
+    if(cn.indexOf(className) != -1) {
+        return true;
+    } else return false;
+}
+
+toggleButton.addEventListener ("click", function() {
+   var content = document.getElementById('content');
+   if(checkClass(content, 'show')){
+      content.classList.remove('show');
+      content.classList.add('hide');
+   } else if(checkClass(content, 'hide')){
+      content.classList.remove('hide');
+      content.classList.add('show');
+   }
+})
+
+
+</script>
+
+
+++++
 ++++

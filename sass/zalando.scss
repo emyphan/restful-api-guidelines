@@ -11,6 +11,18 @@
   color: $should-color;
 }
 
+.toggleNavigation {
+  vertical-align: top;
+}
+
+.show {
+  left: 200px;
+}
+
+.hide {
+  left: 0px;
+}
+
 .may-keyword {
   color: $may-color;
 }
